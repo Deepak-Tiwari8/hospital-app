@@ -4,13 +4,13 @@ import java.util.List;
 
 import com.ty.hospital_app.dto.Branch;
 
-public interface BranchInterface {
+public interface BranchInterfaceDao {
 
 	public abstract Branch saveBranch(Branch branch);
 
 	public abstract Branch getBranchById(int branchId);
 
-	public abstract Branch getBranchByName(int branchId);
+	public abstract Branch getBranchByName(String branchName);
 
 	public abstract boolean deleteBranchById(int branchId);
 

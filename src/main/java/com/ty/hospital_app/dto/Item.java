@@ -14,7 +14,6 @@ public class Item {
 	private String itemName;
 	private int itemQuantity;
 	private double itemCost;
-
 	public int getItemId() {
 		return itemId;
 	}

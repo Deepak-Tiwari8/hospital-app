@@ -1,10 +1,10 @@
-package com.ty.hospital_app.dao;
+package com.ty.hospital_app.service;
 
 import java.util.List;
 
 import com.ty.hospital_app.dto.MedOrder;
 
-public interface MedOrderInterface {
+public interface MedOrderInterfaceService {
 
 	public abstract MedOrder saveMedOrder(int encounterId,MedOrder medOrder);
 

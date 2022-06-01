@@ -2,7 +2,7 @@ package com.ty.hospital_app.dao;
 
 import com.ty.hospital_app.dto.Hospital;
 
-public interface HospitalInterface {
+public interface HospitalInterfaceDao {
 
 	public abstract Hospital saveHospital(Hospital hospital);
 

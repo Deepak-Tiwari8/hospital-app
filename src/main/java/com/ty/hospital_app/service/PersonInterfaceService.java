@@ -1,10 +1,10 @@
-package com.ty.hospital_app.dao;
+package com.ty.hospital_app.service;
 
 import java.util.List;
 
 import com.ty.hospital_app.dto.Person;
 
-public interface PersonInterface {
+public interface PersonInterfaceService {
 
 	public abstract Person savePerson(Person person);
 

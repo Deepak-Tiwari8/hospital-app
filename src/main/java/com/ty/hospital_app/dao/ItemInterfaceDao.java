@@ -5,7 +5,7 @@ import java.util.List;
 import com.ty.hospital_app.dto.Item;
 import com.ty.hospital_app.dto.Observation;
 
-public interface ItemInterface {
+public interface ItemInterfaceDao {
 
 	public abstract Item saveItem(int medOrderId,Item item);
 	public abstract Item getItemById(int itemId);

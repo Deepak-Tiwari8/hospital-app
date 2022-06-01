@@ -13,17 +13,17 @@ public class Hospital {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String hospitalId;
+	private int hospitalId;
 	private String hospitalName;
 	private String hospitalWebsite;
-	@OneToMany
+	@OneToMany(mappedBy = "hospital")
 	private List<Branch> hospitalbranch;
 
-	public String getHospitalId() {
+	public int getHospitalId() {
 		return hospitalId;
 	}
 
-	public void setHospitalId(String hospitalId) {
+	public void setHospitalId(int hospitalId) {
 		this.hospitalId = hospitalId;
 	}
 
@@ -50,4 +50,11 @@ public class Hospital {
 	public void setBranch(List<Branch> hospitalbranch) {
 		this.hospitalbranch = hospitalbranch;
 	}
+
+	@Override
+	public String toString() {
+		return "Hospital [hospitalId=" + hospitalId + ", hospitalName=" + hospitalName + ", hospitalWebsite="
+				+ hospitalWebsite + ", hospitalbranch=" + hospitalbranch + "]";
+	}
+	
 }

@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -18,13 +20,15 @@ public class Encounter {
 	private LocalDateTime admitDateAndTime;
 	private LocalDateTime disChargeDateAndTime;
 	private String reason;
-	@OneToMany
+    @ManyToOne
+    @JoinColumn
 	private Person person;
-	@OneToMany
+    @ManyToOne
+    @JoinColumn
 	private Branch branch;
-	@OneToMany
+	@OneToMany(mappedBy = "encounter")
 	private List<MedOrder> medOrder;
-	@OneToMany
+	@OneToMany(mappedBy = "en")
 	private List<Observation> observations;
 	public int getEncounterId() {
 		return encounterId;

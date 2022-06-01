@@ -2,7 +2,7 @@ package com.ty.hospital_app.dao;
 
 import com.ty.hospital_app.dto.Address;
 
-public interface AddressInterface {
+public interface AddressInterfaceDao {
 
 	public abstract Address saveAddress(Address address);
 
